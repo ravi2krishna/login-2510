@@ -36,3 +36,9 @@ courses:
 - azure
 - devops
 - python
+
+# Any yaml file for k8s has these top level items
+apiVersion:
+kind:
+metadata:
+spec:
