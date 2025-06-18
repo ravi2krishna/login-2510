@@ -1,0 +1,11 @@
+# Pod Manifest for Nginx App
+apiVersion: v1 # simple key value
+kind: Pod # simple key value
+metadata: # Dictionary
+  name: nginx-pod
+spec: # Dictionary
+  containers: # List
+  - name: c1
+    image: nginx
+    ports:
+    - containerPort: 80
