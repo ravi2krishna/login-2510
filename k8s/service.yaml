@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: nginx-service
 spec:
+  type: NodePort # grants external access on port 30007
   selector:
     app: nginx
   ports:
