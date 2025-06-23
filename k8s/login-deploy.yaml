@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment # Except this line
+metadata:
+  name: login
+spec:
+  replicas: 1 # 1 pod should always run
+  selector:
+    matchLabels:
+      app: login
+  template: # pod template
+    metadata:
+      labels:
+        app: login
+    spec:
+      containers:
+      - name: c1
+        image: login
+        ports:
+        - containerPort: 80
