@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1 # 1 pod should always run
+  selector:
+    matchLabels:
+      app: nginx
+  template: # pod template
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: c1
+        image: nginx
+        ports:
+        - containerPort: 80
